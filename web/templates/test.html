@@ -1,0 +1,19 @@
+<head>
+  <link rel="stylesheet" href="static/css/test.css">
+</head>
+<body>
+  <h1 class="title"> TODO </h1>
+  <div class="form-container">
+    <form action="/mongo/post" method="POST">
+      <input type="text" name="title" id="todo" placeholder="add todo item">
+      <input type="submit" value="Add Todo">
+    </form>
+  </div>
+  <div class="todo-container">
+    {% for item in items %}
+    <div class="todo-card">
+      {{ item.title }}
+    </div>
+    {% endfor %}
+  </div>
+</body>
